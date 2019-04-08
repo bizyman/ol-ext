@@ -37,7 +37,7 @@
   "homepage": "https://github.com/Viglino/ol-ext#,",
   "dependencies": {
     "jquery": ">=1.11.0",
-    "openlayers": "*"
+    "openlayers": "^4.6.4"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -45,6 +45,7 @@
     "gulp-cssnext": "^1.0.1",
     "gulp-header": "^1.8.8",
     "gulp-minify": "0.0.14",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "gulp-jsdoc3": "^1.0.1"
   }
 }

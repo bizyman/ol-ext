@@ -37,7 +37,12 @@ gulp.task("css", function() {
 		])
     .pipe(cssnext({
       compress: !options.debug,
-      sourcemap: options.debug
+      sourcemap: options.debug,
+      browsers: [
+        "> 1%",
+        "last 2 versions",
+        "Android >= 4.4"
+      ]
     }))
 	.pipe(concat(name+(!options.debug?".min.css":".css")))
     .pipe(gulp.dest("./dist/"))
