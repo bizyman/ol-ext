@@ -89,8 +89,8 @@ ol_control_SearchPhoton.prototype.handleResponse = function (response) {
 };
 
 /** Prevent same feature to be drawn twice: test equality
- * @param {} f1 First feature to compare
- * @param {} f2 Second feature to compare
+ * @param {ol.Feature} f1 First feature to compare
+ * @param {ol.Feature} f2 Second feature to compare
  * @return {boolean}
  * @api
  */

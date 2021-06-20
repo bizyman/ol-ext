@@ -107,7 +107,7 @@ ol_control_GridReference.prototype.sortFeatures = function (a,b) {
 
 /** Get the feature title
  * @param {ol.Feature} f
- * @return the first letter of the eature name (getFeatureName)
+ * @return {string} the first letter of the feature name (getFeatureName)
  * @api
  */
 ol_control_GridReference.prototype.indexTitle = function (f) {

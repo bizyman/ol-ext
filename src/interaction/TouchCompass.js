@@ -11,7 +11,7 @@ import ol_ext_getMapCanvas from '../util/getMapCanvas'
 /** Interaction splitter: acts as a split feature agent while editing vector features (LineString).
  * @constructor
  * @extends {ol_interaction_Pointer}
- * @param {olx.interaction.TouchCompass} 
+ * @param {olx.interaction.TouchCompass} options Options
  *	- onDrag {function|undefined} Function handling "drag" events. It provides a dpixel and a traction (in projection) vector form the center of the compas
  *	- size {Number} size of the compass in px, default 80
  *	- alpha {Number} opacity of the compass, default 0.5

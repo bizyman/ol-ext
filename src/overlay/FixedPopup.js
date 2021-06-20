@@ -23,7 +23,7 @@ import {ol_coordinate_dist2d} from "../geom/GeomUtils";
  * @extends {ol_Overlay_Popup}
  * @fires show
  * @fires hide
- * @param {} options Extend Overlay options 
+ * @param {*} options Extend Overlay options 
  *	@param {String} options.popupClass the a class of the overlay to style the popup.
  *	@param {ol.style.Style} options.style a style to style the link on the map.
  *	@param {number} options.minScale min scale for the popup, default .5

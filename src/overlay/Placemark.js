@@ -19,7 +19,7 @@ popup.hide();
 *
 * @constructor
 * @extends {ol_Overlay}
-* @param {} options Extend ol/Overlay/Popup options 
+* @param {*} options Extend ol/Overlay/Popup options 
 *	@param {String} options.color placemark color
 *	@param {String} options.backgroundColor placemark color
 *	@param {String} options.contentColor placemark color

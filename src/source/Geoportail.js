@@ -90,7 +90,7 @@ ol_source_Geoportail.prototype.serviceURL = function() {
 /**
  * Return the associated API key of the Map.
  * @function
- * @return the API key.
+ * @return {string} the API key.
  * @api stable
  */
 ol_source_Geoportail.prototype.getGPPKey = function() {

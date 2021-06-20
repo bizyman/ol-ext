@@ -19,7 +19,7 @@ import ol_ext_element from '../util/element'
  * @extends ol_control_Attribution
  * @param {Object=} options extend the ol_control_Attribution options.
  * 	@param {ol_style_Style} options.style  option is usesd to draw the text.
- *  @paream {boolean} [options.canvas=false] draw on canvas
+ *  @param {boolean} [options.canvas=false] draw on canvas
  */
 var ol_control_CanvasAttribution = function(options) {
   if (!options) options = {};

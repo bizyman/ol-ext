@@ -22,7 +22,7 @@ popup.hide();
 * @extends {ol_Overlay}
 * @fires show
 * @fires hide
-* @param {} options Extend Overlay options 
+* @param {*} options Extend Overlay options 
 *	 @param {String} options.popupClass the a class of the overlay to style the popup.
 *	 @param {boolean} options.anim Animate the popup the popup, default false.
 *	 @param {bool} options.closeBox popup has a close box, default false.

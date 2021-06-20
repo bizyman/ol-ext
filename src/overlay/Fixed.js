@@ -18,7 +18,7 @@ popup.setposition(position, true);
 *
 * @constructor
 * @extends {ol_Overlay}
-* @param {} options Extend Overlay options 
+* @param {*} options Extend Overlay options 
 * @api stable
 */
 var ol_Overlay_Fixed = function (options) {

@@ -19,7 +19,7 @@ import {asString as ol_color_asString} from 'ol/color'
  * Set chart style for vector features.
  *
  * @constructor
- * @param {} options
+ * @param {*} options
  *	@param {String} options.type Chart type: pie,pie3D, donut or bar
  *	@param {number} options.radius Chart radius/size, default 20
  *	@param {number} options.rotation Rotation in radians (positive rotation clockwise). Default is 0.

@@ -31,7 +31,7 @@ import ol_ext_element from '../util/element'
  * @fires show
  * @fires hide
  * @fires select
- * @param {} options Extend Popup options 
+ * @param {*} options Extend Popup options 
  *  @param {String} options.popupClass the a class of the overlay to style the popup.
  *  @param {bool} options.closeBox popup has a close box, default false.
  *  @param {function|undefined} options.onclose: callback function when popup is closed

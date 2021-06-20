@@ -13,7 +13,7 @@ import ol_Overlay_Popup from './Popup'
 /** A tooltip element to be displayed over the map and attached on the cursor position.
  * @constructor
  * @extends {ol_Overlay_Popup}
- * @param {} options Extend Popup options 
+ * @param {*} options Extend Popup options 
  *	@param {String} options.popupClass the a class of the overlay to style the popup.
  *  @param {number} options.maximumFractionDigits maximum digits to display on measure, default 2
  *  @param {function} options.formatLength a function that takes a number and returns the formated value, default length in meter
