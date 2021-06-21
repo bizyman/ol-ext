@@ -73,6 +73,7 @@ ol_control_EditBar.prototype.setMap = function (map) {
 
 /** Get an interaction associated with the bar
  * @param {string} name 
+ * @return {_ol_interaction_}
  */
 ol_control_EditBar.prototype.getInteraction = function (name) {
   return this._interactions[name];

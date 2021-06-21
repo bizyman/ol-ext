@@ -39,7 +39,7 @@ WSynchro.synchronize = function(params)
 
 /**	Synchronize windows: 
 *	@param {Array} array of arguments to use with fn
-*	@param {} internal syncrho time to avoid stnchro loops
+*	@param {*} internal syncrho time to avoid stnchro loops
 *	@private
 */
 WSynchro.synchronize_ = function(args, sync) {

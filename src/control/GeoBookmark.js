@@ -9,7 +9,7 @@ import ol_ext_element from '../util/element'
  * @fires add
  * @fires remove
  * @fires select
- * @param {} options Geobookmark's options
+ * @param {Object=} options Geobookmark's options
  *  @param {string} options.className default ol-bookmark
  *  @param {string | undefined} options.title Title to use for the button tooltip, default "Geobookmarks"
  *  @param {string} options.placeholder input placeholder, default Add a new geomark...
@@ -110,7 +110,7 @@ var ol_control_GeoBookmark = function(options) {
 ol_ext_inherits(ol_control_GeoBookmark, ol_control_Control);
 
 /** Set bookmarks
- * @param {} bmark a list of bookmarks, default retreave in the localstorage
+ * @param {Object=} bmark a list of bookmarks, default retreave in the localstorage
  * @example 
 bm.setBookmarks({ 
   "Paris": {pos:_ol_proj_.transform([2.351828, 48.856578], 'EPSG:4326', 'EPSG:3857'), zoom:11, permanent: true },

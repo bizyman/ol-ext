@@ -159,7 +159,7 @@ ol_interaction_TouchCursorModify.prototype.setActive = function(b, position) {
 
 /**
  * Get the modify interaction.
- * @retunr {ol.interaction.ModifyFeature} 
+ * @return {ol.interaction.ModifyFeature} 
  * @observable
  * @api
  */

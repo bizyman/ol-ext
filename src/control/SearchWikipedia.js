@@ -139,5 +139,4 @@ ol_control_SearchWikipedia.prototype.select = function (f){
   })
 };
 
-/** */
 export default ol_control_SearchWikipedia

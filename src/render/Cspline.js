@@ -10,14 +10,14 @@ import { ol_coordinate_dist2d } from '../geom/GeomUtils'
  *	Original https://github.com/epistemex/cardinal-spline-js
  *	@see https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Cardinal_spline
  *
- * @param {} options
+ * @param {Object=} options
  *	@param {Number} options.tension a [0,1] number / can be interpreted as the "length" of the tangent, default 0.5
  *  @param {Number} options.resolution size of segment to split
  *	@param {Integer} options.pointsPerSeg number of points per segment to add if no resolution is provided, default add 10 points per segment
  */
 
 /** Cache cspline calculation on a geometry
- * @param {} options
+ * @param {Object=} options
  *	@param {Number} options.tension a [0,1] number / can be interpreted as the "length" of the tangent, default 0.5
  *  @param {Number} options.resolution size of segment to split
  *	@param {Integer} options.pointsPerSeg number of points per segment to add if no resolution is provided, default add 10 points per segment
@@ -73,7 +73,7 @@ ol_geom_MultiPolygon.prototype.calcCSpline_ = function(options) {
 
 /** Calculate cspline on coordinates
  * @param {Array<ol_geom_Geometry.coordinate>} line
- * @param {} options
+ * @param {Object=} options
  *	@param {Number} options.tension a [0,1] number / can be interpreted as the "length" of the tangent, default 0.5
  *  @param {Number} options.resolution size of segment to split
  *	@param {Integer} options.pointsPerSeg number of points per segment to add if no resolution is provided, default add 10 points per segment

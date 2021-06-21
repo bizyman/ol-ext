@@ -13,7 +13,7 @@ import {asString as ol_color_asString} from 'ol/color'
  * A marker style to use with font symbols.
  *
  * @constructor
- * @param {} options Options.
+ * @param {Object=} options Options.
  *  @param {string} [options.color] default #000
  *  @param {string} options.glyph the glyph name or a char to display as symbol. 
  *    The name must be added using the {@link ol.style.FontSymbol.addDefs} function.
@@ -86,7 +86,7 @@ ol_style_FontSymbol.prototype.defs = { 'fonts':{}, 'glyphs':{} };
 
 /** Static function : add new font defs 
  * @param {String|Object} font the font desciption
- * @param {} glyphs a key / value list of glyph definitions. 
+ * @param {*} glyphs a key / value list of glyph definitions. 
  * 		Each key is the name of the glyph, 
  * 		the value is an object that code the font, the caracter code, 
  * 		the name and a search string for the glyph.

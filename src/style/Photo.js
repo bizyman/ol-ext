@@ -15,7 +15,7 @@ import ol_style_Stroke from 'ol/style/Stroke'
  * Set Photo style for vector features.
  *
  * @constructor
- * @param {} options
+ * @param {Object=} options
  *  @param { default | square | round | anchored | folio } options.kind
  *  @param {boolean} options.crop crop within square, default is false
  *  @param {Number} options.radius symbol size

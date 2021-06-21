@@ -35,7 +35,7 @@ import {unByKey as ol_Observable_unByKey} from 'ol/Observable'
  *	@param {ol.events.ConditionType | undefined} options.keepAspectRatio A function that takes an ol.MapBrowserEvent and returns a boolean to keep aspect ratio, default ol.events.condition.shiftKeyOnly.
  *	@param {ol.events.ConditionType | undefined} options.modifyCenter A function that takes an ol.MapBrowserEvent and returns a boolean to apply scale & strech from the center, default ol.events.condition.metaKey or ol.events.condition.ctrlKey.
  *	@param {boolean} options.enableRotatedTransform Enable transform when map is rotated
- *	@param {} options.style list of ol.style for handles
+ *	@param {*} options.style list of ol.style for handles
  *
  */
 var ol_interaction_Transform = function(options) {

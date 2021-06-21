@@ -162,7 +162,7 @@ ol_style_clearDBPediaStyleCache = function() {
 }
 
 /** Get a default style function for dbpedia
-* @param {} options
+* @param {Object=} options
 * @param {string|function|undefined} options.glyph a glyph name or a function that takes a feature and return a glyph
 * @param {number} options.radius radius of the symbol, default 8
 * @param {ol.style.Fill} options.fill style for fill, default navy

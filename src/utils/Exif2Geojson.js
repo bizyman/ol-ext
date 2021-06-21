@@ -3,7 +3,7 @@
 * reading location in the EXIF tags
 * @constructor
 * @param {Array<Image|File>} img the array to process
-* @param {} options
+* @param {Object=} options
 *	  @param {boolean} camera true to get camera info
 *	  @param {boolean} options.date true to get photo date
 *	  @param {boolean} options.image true to get image info

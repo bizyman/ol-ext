@@ -213,7 +213,7 @@ ol_control_Dialog.prototype.hide = function() {
 };
 
 /** Close the dialog 
- * @method Dialog.close
+ * @method ol_control_Dialog.close
  * @return {bool} true if a dialog is closed
  */
 ol_control_Dialog.prototype.close = ol_control_Dialog.prototype.hide;

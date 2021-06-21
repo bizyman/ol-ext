@@ -114,7 +114,7 @@ ol_layer_Vector.prototype.setTextPathStyle = function(style, maxResolution)
 /** Add new properties to ol.style.Text
 * to use with ol.layer.Vector.prototype.setTextPathStyle
 * @constructor
-* @param {} options
+* @param {Object=} options
 *	@param {visible|ellipsis|string} textOverflow
 *	@param {number} minWidth minimum width (px) to draw text, default 0
 */

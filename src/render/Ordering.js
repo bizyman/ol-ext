@@ -19,7 +19,7 @@ ol_ordering.yOrdering = function()
 };
 
 /** Order with a feature attribute
- * @param options
+ * @param {Option=} options
  *  @param {string} options.attribute ordering attribute, default zIndex
  *  @param {function} options.equalFn ordering function for equal values
  * @return ordering function (f0,f1)

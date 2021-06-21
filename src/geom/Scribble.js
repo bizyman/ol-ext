@@ -14,7 +14,7 @@ import {ol_coordinate_splitH} from "./GeomUtils";
 
 /**
  * Calculate a MultiPolyline to fill a Polygon with a scribble effect that appears hand-made
- * @param {} options
+ * @param {Object=} options
  *  @param {Number} options.interval interval beetween lines
  *  @param {Number} options.angle hatch angle in radian, default PI/2
  * @return {ol_geom_MultiLineString|null} the resulting MultiLineString geometry or null if none
@@ -42,7 +42,7 @@ ol_geom_MultiPolygon.prototype.scribbleFill = function (options) {
 
 /**
  * Calculate a MultiPolyline to fill a Polygon with a scribble effect that appears hand-made
- * @param {} options
+ * @param {Object=} options
  *  @param {Number} options.interval interval beetween lines
  *  @param {Number} options.angle hatch angle in radian, default PI/2
  * @return {ol_geom_MultiLineString|null} the resulting MultiLineString geometry or null if none
