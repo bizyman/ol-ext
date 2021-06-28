@@ -25,19 +25,14 @@
 
   <!-- Openlayers -->
   <link rel="stylesheet" href="https://openlayers.org/en/latest/css/ol.css" />
-  <script type="text/javascript" src="https://openlayers.org/en/latest/build/ol.js"></script>
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL,Object.assign"></script>
 
   <!-- ol-ext -->
   <link rel="stylesheet" href="../../dist/ol-ext.css" />
-  <script type="text/javascript" src="../../dist/ol-ext.js"></script>
   <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
   <script src="https://unpkg.com/elm-pep"></script>
 
   <!-- ol-ext maki and fontawesome defintions used in fontsymbol -->
-  <script type="text/javascript" src="../../dist/extra/FontMakiDef.js"></script>
-  <script type="text/javascript" src="../../dist/extra/FontMaki2Def.js"></script>
-  <script type="text/javascript" src="../../dist/extra/FontAwesomeDef.js"></script>
 
   <style>
     .options i.standard,
@@ -262,159 +257,7 @@
 
 
 
-  <script type="text/javascript">
-  
-  // Using FontAwesome > 5, set package here
-  // ol.style.FontSymbol.prototype.defs.fonts.FontAwesome.font = "Font Awesome 5 Free";
-
-  // Layers
-  var layer = new ol.layer.Tile({ source: new ol.source.Stamen({ layer: 'watercolor' }) });
-    
-  // The map
-  var map = new ol.Map ({
-    target: 'map',
-    view: new ol.View({
-      zoom: 6,
-      center: [166326, 5992663]
-    }),
-    layers: [layer]
-  });
-
-
-  // Get font glyph
-  var theGlyph = 'maki-building';
-  var theText = '';
-  function setFont(g) {
-    if (typeof(g)==='string') theGlyph = g;
-    else theGlyph = $(this).data("glyph");
-    theText = '';
-    vector.changed();
-  }
-  function setText(t) {
-    theText = t;
-    theGlyph = null;
-    vector.changed();
-  }
-  // Fill font glyphs
-  var glyph = ol.style.FontSymbol.prototype.defs.glyphs;
-  var opt = $(".options");
-  for (var font in ol.style.FontSymbol.prototype.defs.fonts) {
-    $("<h2>").text(font+":").appendTo(opt);
-    for (var i in glyph) {
-      if (glyph[i].font == font) {
-        $("<i>").addClass("fa "+i)
-          .data("glyph",i)
-          .attr("title", glyph[i].name)
-          .on("click", setFont)
-          .appendTo(opt);
-      }
-    }
-  }
-  
-  // Style function
-  function getFeatureStyle (feature) {
-    var st= [];
-    // Shadow style
-    if ($("#shadow").prop('checked')) st.push ( new ol.style.Style({
-      image: new ol.style.Shadow({
-        radius: 15,
-        blur: 5,
-        offsetX: 0,
-        offsetY: 0,
-        fill: new ol.style.Fill({
-          color: "rgba(0,0,0,0.5)"
-        })
-      })
-    }));
-    // Font style
-    st.push ( new ol.style.Style({
-      image: new ol.style.FontSymbol({
-        form: $("#form").val(), //"hexagone", 
-          gradient: $("#gradient").prop('checked'),
-          glyph: theGlyph,
-          text: theText,    // text to use if no glyph is defined
-          font: 'sans-serif',
-          fontSize: Number($("#fontsize").val()),
-          fontStyle: $("#style").val(),
-          radius: Number($("#radius").val()), 
-          //offsetX: -15,
-          rotation: Number($("#rotation").val())*Math.PI/180,
-          rotateWithView: $("#rwview").prop('checked'),
-          offsetY: $("#offset").prop('checked') ? -Number($("#radius").val()):0 ,
-          color: $("#color").val(),
-          fill: new ol.style.Fill({
-            color: $("#fill").val()
-          }),
-          stroke: new ol.style.Stroke({
-            color: $("#stroke").val(),
-            width: Number($("#border").val())
-          })
-        }),
-        stroke: new ol.style.Stroke({
-          width: 2,
-          color: '#f80'
-        }),
-        fill: new ol.style.Fill({
-          color: [255, 136, 0, 0.6]
-        })
-      }));
-      return st;
-  }
-
-  function getStyle(feature, resolution) {
-    var s = getFeatureStyle(feature);
-    // Ne pas recalculer
-    //feature.setStyle(s);
-    return s;
-    
-  };
-
-  // GeoJSON layer
-  var vectorSource = new ol.source.Vector({
-    url: '../data/fond_guerre.geojson',
-    projection: 'EPSG:3857',
-    format: new ol.format.GeoJSON(),
-    attributions: [ "&copy; <a href='https://data.culture.gouv.fr/explore/dataset/fonds-de-la-guerre-14-18-extrait-de-la-base-memoire'>data.culture.gouv.fr</a>" ],
-    logo:"https://www.data.gouv.fr/s/avatars/37/e56718abd4465985ddde68b33be1ef.jpg" 
-  });
-
-  var vector = new ol.layer.Vector({
-    name: '1914-18',
-    preview: "http://www.culture.gouv.fr/Wave/image/memoire/2445/sap40_z0004141_v.jpg",
-    source: vectorSource,
-    // y ordering
-    renderOrder: ol.ordering.yOrdering(),
-    style: getStyle
-  })
-
-  map.addLayer(vector);
-
-
-  //
-  function setOptions(glyph, form, color, scolor, fcolor, border, radius, fsize, offset, gradient, shadow) {
-    theGlyph = glyph;
-    theText = '';
-    $("#style").val('');
-    $("#color").val(color);
-    $("#form").val(form);
-    $("#fill").val(fcolor);
-    $("#stroke").val(scolor);
-    $("#border").val(border);
-    $("#radius").val(radius);
-    $("#fontsize").val(fsize||1);
-    $("#offset").prop("checked", offset||false);
-    $("#gradient").prop("checked", gradient||false);
-    $("#shadow").prop("checked", shadow||false);
-    // Refresh
-    vector.changed();
-  }
-
-  // Redraw layer when fonts are loaded
-  $(window).on("load", function(){ console.log("loaded"); vector.changed(); });
-
-  map.addInteraction(new ol.interaction.Select())
-
-  </script>
+  <script type="text/javascript" src="map.style.font.js"></script>
   
 </body>
 </html>
